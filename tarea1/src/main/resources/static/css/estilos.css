@@ -1,0 +1,318 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 30 ene 2024, 23:44:01
+    Author     : brand
+*/
+
+
+/* Reset de estilos */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0px;
+}
+
+body {
+    box-sizing: border-box;
+    height: 80px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+/* Encabezado */
+.encabezado {
+    /*    display: flex;*/
+    position:fixed;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu-item {
+    margin-right: 90px;
+}
+
+.nav-link {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #c5a800;
+}
+
+
+aside {
+    overflow-y: auto;
+    position: fixed;
+    background-color: gainsboro;
+    top: 50px;
+    padding: 20px;
+    margin: 20px 0;
+    left:0;
+    width: 15%;
+    bottom: 20px;
+
+}
+
+aside article{
+    transition: box-shadow 0.3s ease ;
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+}
+aside article:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3) ;
+    cursor: pointer;
+}
+
+.p_car{
+    margin-left: 18px;
+}
+
+.sec-prin{
+    margin-left: 15%;
+}
+
+
+section {
+    text-align: center;
+    padding: 100px;
+}
+
+.titPrin {
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.h2-sec{
+    margin: 5px;
+}
+.container{
+    display: flex;
+    width: 400px;
+    margin: 0 0;
+    margin-left: 38%;
+    padding-bottom: 2px;
+
+}
+
+.artAsi{
+
+    transition: box-shadow 0.3s ease ;
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    /*    padding-bottom: 25px;*/
+
+}
+.p_car{
+    text-decoration: none;
+    color: #333;
+}
+
+.artAsi:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3) ;
+    cursor: pointer;
+}
+
+.CarroVenta{
+    transition: box-shadow 0.3s ease ;
+    background-color: #fff;
+    margin-bottom: -80px;
+    border-radius: 0.5rem;
+       padding-bottom: 10px;
+
+}
+
+.CarroVenta:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3) ;
+    cursor: pointer;
+}
+
+section article h2, section article p{
+    margin: 1rem;
+}
+.titTT{
+    font-family:'Arial';
+    margin-left: 150px;
+    margin-bottom: -200px;
+}
+
+.containerTT{
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    margin-left: 250px;
+    margin-bottom: 100px;
+
+}
+
+.CarroVentaTT{
+    transition: box-shadow 0.3s ease ;
+    background-color: #fff;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+
+}
+
+.CarroVentaTT:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3) ;
+    cursor: pointer;
+}
+section article h2, section article p{
+    margin: 1rem;
+}
+
+.containerDep{
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    margin-left: 550px;
+    margin-bottom: 200px;
+
+
+}
+
+.CarroVentaDep{
+    transition: box-shadow 0.3s ease ;
+    background-color: #fff;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+
+}
+
+.CarroVentaDep:hover{
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3) ;
+    cursor: pointer;
+}
+
+.artMap{
+
+    background-color: #fff;
+    margin: 3rem 0;
+    border-radius: 1rem;
+    height: 500px;
+
+    /*    padding-bottom: 25px;*/
+
+}
+.artUbi{
+
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 1rem;
+
+
+    /*    padding-bottom: 25px;*/
+
+}
+.map{
+    margin-top: 30px;
+    width: 1000px;
+    border-radius: 2rem;
+}
+
+.artCont{
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 1rem;
+
+}
+
+.artCont2{
+    background-color: #fff;
+    margin: 2rem 0;
+    border-radius: 1rem;
+}
+
+.gmail{
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+}
+.gmail:hover{
+    color: #c5a800 ;
+    cursor: pointer;
+}
+
+.artJeep{
+    background-color: #fff;
+    margin: -10rem 3rem;
+    border-radius: 0.5rem;
+    padding: 3rem 1.5rem;
+
+
+}
+
+.imgJeep{
+    width: 500px;
+
+}
+.secTex{
+   margin-bottom: -80px; 
+}
+.artJeep2{
+    background-color: #fff;
+    margin: 15rem 0;
+    border-radius: 1rem;
+/*    padding: 1rem 4rem;*/
+}
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
