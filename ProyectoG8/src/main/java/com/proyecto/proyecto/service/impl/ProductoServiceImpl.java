@@ -1,0 +1,56 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.proyecto.proyecto.service.impl;
+
+import com.proyecto.proyecto.dao.ProductoDao;
+import com.proyecto.proyecto.domain.Producto;
+import com.proyecto.proyecto.service.ProductoService;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+/**
+ *
+ * @author brand
+ */
+@Service
+public class ProductoServiceImpl implements ProductoService{
+    
+    @Autowired
+    private ProductoDao productoDao;
+
+    @Override
+    @Transactional(readOnly=true)
+    public List<Producto> getProductos(boolean activos) {
+       var listado=productoDao.findAll();
+       if(activos){//si 
+           listado.removeIf(c->!c.isActivo());
+       }
+       
+       return listado;
+    }
+
+    @Override
+    @Transactional(readOnly=true)
+    public Producto getProducto(Producto producto) {
+        
+        return productoDao.findById(producto.getIdProducto()).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Producto producto) {
+        
+       productoDao.delete(producto);
+    }
+
+    @Override
+    @Transactional
+    public void save(Producto producto) {
+        productoDao.save(producto);
+    }
+    
+}
