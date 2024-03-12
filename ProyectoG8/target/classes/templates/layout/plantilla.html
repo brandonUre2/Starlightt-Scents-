@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+
+    <head th:fragment="head">
+        <title>Velas</title>
+        <meta charset="UTF-8">
+            <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>        
+            <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>      
+            <script th:src="@{/js/rutinas.js}"></script>  
+            <script th:src="@{/webjars/jquery/jquery.min.js}"></script>        
+            <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>       
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> 
+    </head>
+    <body>
+        <header th:fragment="header" class="header">
+            <nav class="navbar navbar-expand-lg bg-danger-subtle rounded-bottom px-5">
+                <div class="container-fluid">
+                    <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item px-2">
+                                <a class="nav-link" aria-current="page" th:href="@{/catalogo/listado}">[[#{plantilla.catalogo}]]</a>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link" th:href="@{/carrito/}">[[#{plantilla.carrito}]]</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle px-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Ver
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">[[#{plantilla.usuarios}]]</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-2">
+                                <a class="nav-link disabled" aria-disabled="true">[[#{plantilla.productos}]]</a>
+                            </li>
+                        </ul>
+                         <ul class="navbar-nav">
+                            <li class="nav-item dropdown mx-4">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">[[#{plantilla.idioma}]]</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item"  th:href="@{/(lang=es)}">ES</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/(lang=en)}">EN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-danger" type="submit">[[#{plantilla.buscar}]]</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <footer th:fragment="footer" class="bg-danger-subtle text-black mt-5 p-2">
+                <div class="container">
+                    <div class="col">
+                        <p class="lead text-center">&COPY [[#{plantilla.derechos}]]</p>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>
